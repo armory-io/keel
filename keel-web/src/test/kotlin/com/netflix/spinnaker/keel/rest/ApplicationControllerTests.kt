@@ -64,7 +64,8 @@ import strikt.assertions.containsExactly
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(
   classes = [KeelApplication::class, MockEurekaConfiguration::class, ApplicationControllerTests.TestConfiguration::class],
-  webEnvironment = MOCK
+  webEnvironment = MOCK,
+  properties = ["spring.application.name=keel"]
 )
 @AutoConfigureMockMvc
 internal class ApplicationControllerTests : JUnit5Minutests {

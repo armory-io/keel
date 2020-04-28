@@ -21,7 +21,8 @@ import strikt.assertions.startsWith
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(
   classes = [KeelApplication::class, ThreadCapturingEventListener::class],
-  webEnvironment = MOCK
+  webEnvironment = MOCK,
+  properties = ["spring.application.name=keel"]
 )
 internal class ApplicationEventTests {
 

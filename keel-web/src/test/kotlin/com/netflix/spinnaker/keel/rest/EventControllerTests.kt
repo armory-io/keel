@@ -58,7 +58,8 @@ import strikt.jackson.isArray
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(
   classes = [KeelApplication::class, MockEurekaConfiguration::class, MockTimeConfiguration::class],
-  webEnvironment = MOCK
+  webEnvironment = MOCK,
+  properties = ["spring.application.name=keel"]
 )
 @AutoConfigureMockMvc
 internal class EventControllerTests : JUnit5Minutests {

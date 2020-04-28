@@ -26,7 +26,8 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(
   classes = [KeelApplication::class, MockEurekaConfiguration::class],
-  webEnvironment = MOCK
+  webEnvironment = MOCK,
+  properties = ["spring.application.name=keel"]
 )
 @AutoConfigureMockMvc
 internal class ArtifactControllerTests : JUnit5Minutests {

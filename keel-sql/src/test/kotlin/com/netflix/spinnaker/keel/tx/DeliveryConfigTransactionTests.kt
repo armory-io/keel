@@ -47,7 +47,8 @@ import strikt.assertions.isFalse
     "sql.connection-pools.default.jdbc-url=jdbc:tc:mysql:5.7.22://somehostname:someport/databasename",
     "sql.migration.jdbc-url=jdbc:tc:mysql:5.7.22://somehostname:someport/databasename",
     "spring.datasource.driver-class-name=org.testcontainers.jdbc.ContainerDatabaseDriver",
-    "eureka.default-to-up=false"
+    "eureka.default-to-up=false",
+    "spring.application.name=keel"
   ]
 )
 internal class DeliveryConfigTransactionTests : JUnit5Minutests {

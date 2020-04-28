@@ -37,7 +37,8 @@ import strikt.assertions.isNotNull
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(
   classes = [KeelApplication::class, MockFiat::class],
-  webEnvironment = MOCK
+  webEnvironment = MOCK,
+  properties = ["spring.application.name=keel"]
 )
 internal class AuthPropagationTests : JUnit5Minutests {
 

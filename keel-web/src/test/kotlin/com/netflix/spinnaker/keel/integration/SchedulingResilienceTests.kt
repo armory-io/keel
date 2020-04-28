@@ -27,7 +27,8 @@ import strikt.api.expectThat
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(
   classes = [KeelApplication::class, TestConfiguration::class],
-  webEnvironment = MOCK
+  webEnvironment = MOCK,
+  properties = ["spring.application.name=keel"]
 )
 internal class SchedulingResilienceTests {
 

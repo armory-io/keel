@@ -22,8 +22,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
     "keel.plugins.ec2.enabled=true",
     "sql.connection-pools.default.jdbc-url=jdbc:tc:mysql:5.7.22://somehostname:someport/databasename",
     "sql.migration.jdbc-url=jdbc:tc:mysql:5.7.22://somehostname:someport/databasename",
-    "spring.datasource.driver-class-name=org.testcontainers.jdbc.ContainerDatabaseDriver"
-  ]
+    "spring.datasource.driver-class-name=org.testcontainers.jdbc.ContainerDatabaseDriver",
+    "spring.application.name=keel"
+]
 )
 // this just avoids some noise if scheduled tasks start running (Orca & CloudDriver endpoints ^^^ are a lie)
 @EnableAutoConfiguration(exclude = [TaskSchedulingAutoConfiguration::class])

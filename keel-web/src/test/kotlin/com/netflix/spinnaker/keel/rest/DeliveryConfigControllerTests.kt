@@ -49,7 +49,8 @@ import strikt.assertions.succeeded
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(
   classes = [KeelApplication::class, MockEurekaConfiguration::class, DummyResourceConfiguration::class],
-  webEnvironment = MOCK
+  webEnvironment = MOCK,
+  properties = ["spring.application.name=keel"]
 )
 @AutoConfigureMockMvc
 internal class DeliveryConfigControllerTests : JUnit5Minutests {
